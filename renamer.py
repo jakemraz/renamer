@@ -7,6 +7,8 @@ def changeName(path, src, tgt):
         if filename == 'renamer.py':
             continue
         newfilename = filename.replace(src,tgt)
+        if filename == newfilename:
+            continue
         print(str(i) + '. ' + filename + ' to ' + newfilename)
         os.rename(path+filename,path+newfilename)
         i = i + 1
